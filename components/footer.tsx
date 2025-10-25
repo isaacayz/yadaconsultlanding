@@ -90,7 +90,17 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-foreground/60">
                 <MapPin size={16} />
-                <span>Lagos, NG</span>
+                <span>Magodo Lagos, NG</span>
+              </li>
+              <li className="flex items-center gap-2 text-foreground/60">
+                <Phone size={16} />
+                <a href="tel:+2348071982054" className="hover:text-foreground transition-colors">
+                  +1 (281) 603-8214
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-foreground/60">
+                <MapPin size={16} />
+                <span>2701 Little Elm, Pkwy Ste 100, Austin, TX</span>
               </li>
             </ul>
           </div>

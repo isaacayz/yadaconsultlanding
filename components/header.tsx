@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "./theme-toggle"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,7 +35,9 @@ export function Header() {
           </a>
         </div>
 
+
         <div className="hidden md:flex gap-4">
+          <ThemeToggle />
           <Button variant="outline" className="border-border text-foreground hover:bg-muted bg-transparent"
           
           onClick={() => {

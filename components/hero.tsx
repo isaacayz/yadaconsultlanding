@@ -9,11 +9,10 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
-                Transform Your Business Through Strategic Technology
+                Powering business transformation through intelligent technology.
               </h1>
               <p className="text-lg text-foreground/70 leading-relaxed text-balance">
-                Expert technology consulting for SMEs and companies. We help you navigate digital transformation,
-                optimize operations, and unlock growth through strategic guidance and implementation.
+                With years of proven expertise across Nigeria and the United States, we deliver expert technology consulting for SMEs and enterprises — helping you navigate digital transformation, optimize operations, and unlock sustainable growth through strategic guidance and seamless implementation.
               </p>
             </div>
 

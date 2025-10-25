@@ -13,19 +13,24 @@ export function CTA() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto text-balance">
-            Let's discuss how Yada Consulting Services can help you achieve your technology goals and drive sustainable
+            Let's discuss how we can help you achieve your technology goals and drive sustainable
             growth.
           </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <a href="/contact">
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
             Schedule Consultation <ArrowRight size={18} />
           </Button>
-          <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted bg-transparent" >
+          </a>
+          <a href="/contact">
+          <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted bg-transparent" 
+              >
             Contact Us
             
           </Button>
+          </a>
         </div>
 
         <div className="pt-8 border-t border-border">
