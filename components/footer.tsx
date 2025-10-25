@@ -8,10 +8,8 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">Y</span>
-              </div>
-              <span className="text-lg font-bold text-foreground">Yada</span>
+              
+              <span className="text-lg font-bold text-foreground">Yada Consulting Services</span>
             </div>
             <p className="text-foreground/60 text-sm leading-relaxed">
               Strategic technology consulting for SMEs and companies worldwide.

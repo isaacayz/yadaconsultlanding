@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "./theme-toggle"
+import Link  from "next/link"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,26 +14,28 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div  className="flex items-center gap-3">
+          <Link href="/">
           <Image
             src="/yada-logo.png"
             alt="Yada Consulting Services Logo"
-            width={80}
-            height={80}
-            className="w-16 h-16 object-contain"
+            width={120}
+            height={120}
+            className="w-28 h-28 object-contain"
           />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#services" className="text-foreground/70 hover:text-foreground transition-colors">
+          <Link href="/#services" className="text-foreground/70 hover:text-foreground transition-colors">
             Services
-          </a>
-          <a href="#approach" className="text-foreground/70 hover:text-foreground transition-colors">
+          </Link>
+          <Link href="/#approach" className="text-foreground/70 hover:text-foreground transition-colors">
             Approach
-          </a>
-          <a href="#contact" className="text-foreground/70 hover:text-foreground transition-colors">
+          </Link>
+          <Link href="/#contact" className="text-foreground/70 hover:text-foreground transition-colors">
             Contact
-          </a>
+          </Link>
         </div>
 
 

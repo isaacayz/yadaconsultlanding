@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Link } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -17,9 +18,11 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
                 Get Started <ArrowRight size={18} />
               </Button>
+              </a>
               <Button
                 size="lg"
                 variant="outline"
@@ -45,13 +48,8 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative h-96 md:h-full min-h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="w-24 h-24 bg-primary/30 rounded-full mx-auto"></div>
-                <p className="text-foreground/50">Strategic Technology Solutions</p>
-              </div>
-            </div>
+          <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden">
+            <Image src="/tech-consulting-team-working-on-digital-transforma.jpg" alt="Technology consulting team" fill className="object-cover" />
           </div>
         </div>
       </div>
