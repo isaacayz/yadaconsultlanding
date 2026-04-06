@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Link } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 export function Hero() {
@@ -18,21 +18,23 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
-                Get Started <ArrowRight size={18} />
-              </Button>
+              <a href="/contact">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
+                  Get Started <ArrowRight size={18} />
+                </Button>
               </a>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border text-foreground hover:bg-muted bg-transparent"
-              >
-                Learn More
-              </Button>
+              <a href="#services">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-border text-foreground hover:bg-muted bg-transparent"
+                >
+                  Learn More
+                </Button>
+              </a>
             </div>
 
-            <div className="flex gap-8 pt-4">
+            <div className="flex flex-wrap gap-6 sm:gap-8 pt-4">
               <div>
                 <p className="text-2xl font-bold text-accent">30+</p>
                 <p className="text-sm text-foreground/60">Projects Completed</p>
@@ -49,7 +51,13 @@ export function Hero() {
           </div>
 
           <div className="relative h-96 md:h-full min-h-96 rounded-2xl overflow-hidden">
-            <Image src="/tech-consulting-team-working-on-digital-transforma.jpg" alt="Technology consulting team" fill className="object-cover" />
+            <Image
+              src="/tech-consulting-team-working-on-digital-transforma.jpg"
+              alt="Yada Consulting team collaborating on a digital transformation project"
+              fill
+              priority
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

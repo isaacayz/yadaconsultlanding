@@ -1,38 +1,47 @@
 import { Card } from "@/components/ui/card"
 import { Zap, Shield, TrendingUp, Code, Lock, BarChart3 } from "lucide-react"
+import Link from "next/link"
 
 const services = [
   {
     icon: Zap,
+    slug: "digital-transformation",
     title: "Digital Transformation",
     description: "Modernize your operations with cutting-edge technology solutions tailored to your business needs.",
   },
   {
     icon: Shield,
+    slug: "cybersecurity",
     title: "Cybersecurity & Compliance",
     description: "Protect your assets with comprehensive security strategies and regulatory compliance guidance.",
   },
   {
     icon: TrendingUp,
+    slug: "business-intelligence",
     title: "Business Intelligence",
     description: "Unlock insights from your data to drive informed decision-making and competitive advantage.",
   },
   {
     icon: Code,
+    slug: "custom-development",
     title: "Custom Development",
     description: "Build scalable applications and systems designed specifically for your unique requirements.",
   },
   {
     icon: Lock,
+    slug: "cloud-infrastructure",
     title: "Cloud Infrastructure",
     description: "Migrate and optimize your infrastructure for reliability, scalability, and cost efficiency.",
   },
   {
     icon: BarChart3,
+    slug: "performance-optimization",
     title: "Performance Optimization",
     description: "Enhance system performance and user experience through strategic optimization initiatives.",
   },
 ]
+
+export { services }
 
 export function Services() {
   return (
@@ -46,19 +55,18 @@ export function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => {
+          {services.map((service) => {
             const Icon = service.icon
             return (
-              <Card
-                key={index}
-                className="bg-card border-border p-8 hover:border-accent/50 transition-colors group cursor-pointer"
-              >
-                <div className="mb-4">
-                  <Icon className="w-10 h-10 text-accent group-hover:text-accent/80 transition-colors" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                <p className="text-foreground/60 leading-relaxed">{service.description}</p>
-              </Card>
+              <Link key={service.slug} href={`/services/${service.slug}`}>
+                <Card className="bg-card border-border p-8 hover:border-accent/50 transition-colors group h-full">
+                  <div className="mb-4">
+                    <Icon className="w-10 h-10 text-accent group-hover:text-accent/80 transition-colors" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
+                  <p className="text-foreground/60 leading-relaxed">{service.description}</p>
+                </Card>
+              </Link>
             )
           })}
         </div>
